@@ -1,10 +1,13 @@
 import './ProfileCard.css';
 
 function ProfileCard(props) {
-    const { name, image, description, socialNetworks } = props;
+    const { name, image, description, socialNetworks, isOnline } = props;
     
     return (<div className="profile-card">
-        <img src={image} alt={image} className="profile-image" />
+        <div className='profile-image-container'>
+            <img src={image} alt={image} className="profile-image" />
+            { isOnline && <span className='online-badge'>En ligne</span> }
+        </div>
         <div className="profile-content">
             <h2 className="profile-name">{name}</h2>
             <p className="profile-description">{description}</p>

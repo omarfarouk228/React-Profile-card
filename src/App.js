@@ -9,7 +9,8 @@ const users = [
     socialNetworks: {
       linkedin: 'https://www.linkedin.com/in/alice-martin/',
       github: 'https://github.com/alice'
-    }
+    },
+    isOnline: true
   },
   {
     name: 'Bob Durand',
@@ -18,7 +19,8 @@ const users = [
     socialNetworks: {
       linkedin: 'https://www.linkedin.com/in/bob-durand/',
       github: 'https://github.com/bob'
-    }
+    },
+    isOnline: false
   },
   {
     name: 'Claire Petit',
@@ -27,7 +29,8 @@ const users = [
     socialNetworks: {
       linkedin: 'https://www.linkedin.com/in/claire-petit/',
       github: 'https://github.com/claire'
-    }
+    },
+    isOnline: true
   },
   
 ];
@@ -36,9 +39,9 @@ function App() {
     <div className='app-container'>
       <h1 className='app-title'>Mon équipe</h1>
       <div className='profiles-containers'>
-        <ProfileCard name={users[0].name} image={users[0].image} description={users[0].description} socialNetworks={users[0].socialNetworks} />
-        <ProfileCard name={users[1].name} image={users[1].image} description={users[1].description} socialNetworks={users[1].socialNetworks} />
-        <ProfileCard name={users[2].name} image={users[2].image} description={users[2].description} socialNetworks={users[2].socialNetworks} />
+        {
+          users.map(user => (<ProfileCard key={user.name} name={user.name} image={user.image} description={user.description} socialNetworks={user.socialNetworks} isOnline={user.isOnline} />))
+        }
       </div>
    </div>
   );
