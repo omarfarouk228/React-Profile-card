@@ -13,3 +13,13 @@
   justify-content: center;
   gap: 30px;
 }
+
+.dark-theme{
+  background-color: #1c1e21;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.light-theme{
+  background-color: #f0F2f5;
+}
