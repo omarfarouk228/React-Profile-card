@@ -1,5 +1,5 @@
 import './App.css';
-import ProfileCard from './ProfileCard';
+import ProfileCard from '../ProfileCard/ProfileCard';
 
 const users = [
   {
