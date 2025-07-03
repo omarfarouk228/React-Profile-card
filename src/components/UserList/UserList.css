@@ -11,3 +11,11 @@ th,td{
     border: 1px solid black;
     padding: 10px;
 }
+
+table a{
+    background-color:black;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 10px;
+    color: white;
+}

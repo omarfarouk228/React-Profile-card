@@ -1,5 +1,4 @@
-import './App.css';
-import ProfileCard from '../ProfileCard/ProfileCard';
+import ProfileCard from '../components/ProfileCard/ProfileCard';
 
 const users = [
   {
@@ -34,17 +33,15 @@ const users = [
   },
   
 ];
-function App() {
-  return (
-    <div className='app-container'>
-      <h1 className='app-title'>Mon équipe</h1>
-      <div className='profiles-containers'>
-        {
-          users.map(user => (<ProfileCard key={user.name} name={user.name} image={user.image} description={user.description} socialNetworks={user.socialNetworks} isOnline={user.isOnline} />))
-        }
-      </div>
-   </div>
-  );
+function HomePage() {
+    return (<div className='app-container'>
+        <h1 className='app-title'>Mon équipe</h1>
+        <div className='profiles-containers'>
+          {
+            users.map(user => (<ProfileCard key={user.name} name={user.name} image={user.image} description={user.description} socialNetworks={user.socialNetworks} isOnline={user.isOnline} />))
+          }
+        </div>
+     </div>);
 }
 
-export default App;
+export default HomePage;

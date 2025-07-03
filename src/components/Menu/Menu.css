@@ -1,0 +1,22 @@
+ul{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+    background-color: darkgoldenrod;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+ul li:hover{
+    background-color: rgb(236, 174, 17);
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}

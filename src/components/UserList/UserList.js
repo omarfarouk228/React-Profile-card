@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import './UserList.css';
+import { Link } from "react-router-dom";
 
 function UserList() {
     // Déclaration des états
@@ -58,6 +59,9 @@ function UserList() {
                     <th>
                         Entreprise
                     </th>
+                    <th>
+                        Actions
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -70,6 +74,9 @@ function UserList() {
                         <td>{user.phone}</td>
                         <td>{user.website}</td>
                         <td>{user.company.name}</td>
+                        <td>
+                            <Link to={`/users/${user.id}`}>Voir</Link>
+                        </td>
                     </tr>))
                 }
             </tbody>
